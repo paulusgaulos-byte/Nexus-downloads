@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111318">
+<title>NEXUS Downloads</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #111318;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px;
+  border-bottom: 1px solid #292b33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo span { color: #a78bfa; }
+
+header small { color: #aaa; }
+
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.intro { margin-bottom: 30px; }
+
+h1 { font-size: 30px; }
+
+.intro p { color: #999; }
+
+input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #343640;
+  border-radius: 10px;
+  background: #1c1e26;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 35px 0 18px;
+}
+
+.apps {
+  display: grid;
+  gap: 14px;
+}
+
+.app {
+  background: #1b1d25;
+  border: 1px solid #292b35;
+  border-radius: 13px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: #30313e;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  font-weight: bold;
+  color: #c4b5fd;
+}
+
+.info { flex: 1; }
+
+.info h3 { margin: 0 0 6px; }
+
+.info p {
+  margin: 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.download {
+  background: #a78bfa;
+  color: #15121e;
+  text-decoration: none;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 30px 15px;
+  font-size: 12px;
+}
+
+[hidden] { display: none !important; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NEXUS<span>.</span></div>
+  <small>DOWNLOADS</small>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Seus aplicativos.<br>Em um só lugar.</h1>
+    <p>Encontre seus aplicativos favoritos.</p>
+  </section>
+
+  <input
+    id="search"
+    type="search"
+    placeholder="Pesquisar aplicativos..."
+    aria-label="Pesquisar aplicativos"
+  >
+
+  <h2>Aplicativos disponíveis</h2>
+
+  <section class="apps" id="apps">
+
+    <article class="app" data-name="google chrome navegador">
+      <div class="app-icon">C</div>
+      <div class="info">
+        <h3>Google Chrome</h3>
+        <p>Navegador de internet</p>
+      </div>
+      <a class="download"
+         href="https://play.google.com/store/apps/details?id=com.android.chrome"
+         target="_blank" rel="noopener noreferrer">
+        Baixar
+      </a>
+    </article>
+
+    <article class="app" data-name="vlc player vídeo música">
+      <div class="app-icon">V</div>
+      <div class="info">
+        <h3>VLC</h3>
+        <p>Reprodutor de mídia</p>
+      </div>
+      <a class="download"
+         href="https://play.google.com/store/apps/details?id=org.videolan.vlc"
+         target="_blank" rel="noopener noreferrer">
+        Baixar
+      </a>
+    </article>
+
+    <article class="app" data-name="whatsapp mensagens comunicação">
+      <div class="app-icon">W</div>
+      <div class="info">
+        <h3>WhatsApp</h3>
+        <p>Aplicativo de mensagens</p>
+      </div>
+      <a class="download"
+         href="https://play.google.com/store/apps/details?id=com.whatsapp"
+         target="_blank" rel="noopener noreferrer">
+        Baixar
+      </a>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  NEXUS DOWNLOADS © 2026
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const apps = document.querySelectorAll(".app");
+
+search.addEventListener("input", () => {
+  const term = search.value.toLowerCase().trim();
+
+  apps.forEach(app => {
+    app.hidden = !app.dataset.name.includes(term);
+  });
+});
+</script>
+
+</body>
+</html>
