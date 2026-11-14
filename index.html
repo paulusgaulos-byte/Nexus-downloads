@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111318">
 <title>NEXUS Downloads</title>
+
 <style>
 * { box-sizing: border-box; }
 
@@ -31,7 +32,6 @@ header {
 }
 
 .logo span { color: #a78bfa; }
-
 header small { color: #aaa; }
 
 main {
@@ -41,9 +41,7 @@ main {
 }
 
 .intro { margin-bottom: 30px; }
-
 h1 { font-size: 30px; }
-
 .intro p { color: #999; }
 
 input {
@@ -80,6 +78,7 @@ h2 {
 .app-icon {
   width: 52px;
   height: 52px;
+  flex-shrink: 0;
   border-radius: 13px;
   background: #30313e;
   display: grid;
@@ -89,14 +88,21 @@ h2 {
   color: #c4b5fd;
 }
 
-.info { flex: 1; }
-
+.info { flex: 1; min-width: 0; }
 .info h3 { margin: 0 0 6px; }
 
 .info p {
   margin: 0;
   color: #999;
   font-size: 13px;
+  line-height: 1.5;
+}
+
+.version {
+  display: inline-block;
+  color: #bba4ff;
+  font-size: 11px;
+  margin-top: 5px;
 }
 
 .download {
@@ -107,6 +113,11 @@ h2 {
   border-radius: 8px;
   font-size: 13px;
   font-weight: bold;
+  white-space: nowrap;
+}
+
+.download:active {
+  opacity: 0.7;
 }
 
 footer {
@@ -117,6 +128,12 @@ footer {
 }
 
 [hidden] { display: none !important; }
+
+@media(max-width: 380px) {
+  .app { gap: 9px; padding: 12px; }
+  .app-icon { width: 43px; height: 43px; }
+  .download { padding: 10px; }
+}
 </style>
 </head>
 
@@ -128,6 +145,7 @@ footer {
 </header>
 
 <main>
+
   <section class="intro">
     <h1>Seus aplicativos.<br>Em um só lugar.</h1>
     <p>Encontre seus aplicativos favoritos.</p>
@@ -144,50 +162,89 @@ footer {
 
   <section class="apps" id="apps">
 
-    <article class="app" data-name="google chrome navegador">
+    <!-- YOUTUBE LITE -->
+    <article class="app"
+      data-name="youtube lite youtube leve aplicativo">
+
+      <div class="app-icon">Y</div>
+
+      <div class="info">
+        <h3>YouTube (Lite)</h3>
+        <p>YouTube que usa menos espaço no seu aparelho.</p>
+        <span class="version">Versão V.1.0 · 3,52 MB</span>
+      </div>
+
+      <a class="download"
+         href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V.1.0/lf.apk">
+        Baixar APK
+      </a>
+
+    </article>
+
+    <!-- GOOGLE CHROME -->
+    <article class="app"
+      data-name="google chrome navegador">
+
       <div class="app-icon">C</div>
+
       <div class="info">
         <h3>Google Chrome</h3>
         <p>Navegador de internet</p>
       </div>
+
       <a class="download"
          href="https://play.google.com/store/apps/details?id=com.android.chrome"
          target="_blank" rel="noopener noreferrer">
         Baixar
       </a>
+
     </article>
 
-    <article class="app" data-name="vlc player vídeo música">
+    <!-- VLC -->
+    <article class="app"
+      data-name="vlc player vídeo música">
+
       <div class="app-icon">V</div>
+
       <div class="info">
         <h3>VLC</h3>
         <p>Reprodutor de mídia</p>
       </div>
+
       <a class="download"
          href="https://play.google.com/store/apps/details?id=org.videolan.vlc"
          target="_blank" rel="noopener noreferrer">
         Baixar
       </a>
+
     </article>
 
-    <article class="app" data-name="whatsapp mensagens comunicação">
+    <!-- WHATSAPP -->
+    <article class="app"
+      data-name="whatsapp mensagens comunicação">
+
       <div class="app-icon">W</div>
+
       <div class="info">
         <h3>WhatsApp</h3>
         <p>Aplicativo de mensagens</p>
       </div>
+
       <a class="download"
          href="https://play.google.com/store/apps/details?id=com.whatsapp"
          target="_blank" rel="noopener noreferrer">
         Baixar
       </a>
+
     </article>
 
   </section>
+
 </main>
 
 <footer>
   NEXUS DOWNLOADS © 2026
+  <p>Distribuição de aplicativos</p>
 </footer>
 
 <script>
