@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111318">
+<title>NEXUS Downloads</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#111318;color:#f5f5f5;font-family:Arial,sans-serif}
+header{padding:22px;border-bottom:1px solid #292b33;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:23px;font-weight:bold;letter-spacing:1px}.logo span{color:#a78bfa}
+header small{color:#aaa}
+main{max-width:850px;margin:auto;padding:35px 20px}
+.intro{margin-bottom:30px}h1{font-size:30px}.intro p{color:#999}
+input{width:100%;padding:16px;border:1px solid #343640;border-radius:10px;background:#1c1e26;color:white;font-size:15px;outline:none}
+h2{font-size:19px;margin:35px 0 18px}
+.apps{display:grid;gap:14px}
+.app{background:#1b1d25;border:1px solid #292b35;border-radius:13px;padding:17px;display:flex;align-items:center;gap:14px}
+.app-icon{width:52px;height:52px;flex-shrink:0;border-radius:13px;background:#30313e;display:grid;place-items:center;font-size:21px;font-weight:bold;color:#c4b5fd}
+.info{flex:1;min-width:0}.info h3{margin:0 0 6px}
+.info p{margin:0;color:#999;font-size:13px;line-height:1.5}
+.version{display:inline-block;color:#bba4ff;font-size:11px;margin-top:5px}
+.download{background:#a78bfa;color:#15121e;text-decoration:none;padding:11px 13px;border-radius:8px;font-size:13px;font-weight:bold;white-space:nowrap}
+.download:active{opacity:.7}
+footer{text-align:center;color:#777;padding:30px 15px;font-size:12px}
+[hidden]{display:none!important}
+.pagination{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;margin:24px 0 8px}
+.page-btn{min-width:38px;height:38px;padding:0 11px;border:1px solid #41414d;border-radius:8px;background:#1b1d25;color:#f5f5f5;font-size:14px;cursor:pointer}
+.page-btn.active{background:#a78bfa;border-color:#a78bfa;color:#15121e;font-weight:bold}
+.page-btn:disabled{opacity:.35;cursor:not-allowed}
+.page-status{text-align:center;color:#888;font-size:12px;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#292b35;color:#fff;border:1px solid #a78bfa;border-radius:10px;padding:12px 16px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:9999;max-width:calc(100% - 32px);text-align:center}
+@media(max-width:380px){.app{gap:9px;padding:12px}.app-icon{width:43px;height:43px}.download{padding:10px}}
+</style>
+</head>
+<body>
+<header><div class="logo">NEXUS<span>.</span></div><small>DOWNLOADS</small></header>
+<main>
+<section class="intro"><h1>Seus aplicativos.<br>Em um só lugar.</h1><p>Encontre seus aplicativos favoritos.</p></section>
+<input id="search" type="search" placeholder="Pesquisar aplicativos..." aria-label="Pesquisar aplicativos">
+<h2>Aplicativos disponíveis</h2>
+<section class="apps" id="apps">
+<article class="app" data-name="playstore usa menos espaço downloads"><div class="app-icon">P</div><div class="info"><h3>Play Store (Lite)</h3><p>Aviso, Desinstale sua playstore oficial.</p><span class="version">Versão 0.654.45</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.02/Play_Store_v0654.45_1795371808070.apk">Baixar APK</a></article>
+<article class="app" data-name="tabuleiro online jogos xadrez"><div class="app-icon">T</div><div class="info"><h3>Tabuleiro Online</h3><p>Jogue online com outras pessoas.</p><span class="version">Versão 0.94.1</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.03/Tabuleiro_Online_v0.94.1_1795537262801.apk">Baixar APK</a></article>
+<article class="app" data-name="nexus store nexus downloads loja aplicativos"><div class="app-icon">N</div><div class="info"><h3>Nexus Store</h3><p>Loja de aplicativos da Nexus.</p><span class="version">Versão 1.2</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.001/Nexus_Store_v1.2_1795358538130.apk">Baixar APK</a></article>
+<article class="app" data-name="youtube que usa menos espaço"><div class="app-icon">Y</div><div class="info"><h3>YouTube (Lite)</h3><p>YouTube que usa menos espaço no seu aparelho.</p><span class="version">Versão V.1.0 · 3,52 MB</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V.1.0/If.apk">Baixar APK</a></article>
+<article class="app" data-name="google lite google leve aplicativo"><div class="app-icon">G</div><div class="info"><h3>Google Lite</h3><p>Aplicativo Google em versão Lite.</p><span class="version">Versão V1.0</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/1.0/Google.apk">Baixar APK</a></article>
+<article class="app" data-name="chatgpt lite inteligência artificial"><div class="app-icon">GPT</div><div class="info"><h3>ChatGPT Lite</h3><p>Acesse o ChatGPT pelo Android.</p><span class="version">Versão V1.0</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/Chat/Chat_Gpt.apk">Baixar APK</a></article>
+<article class="app" data-name="github lite github desenvolvedor"><div class="app-icon">G</div><div class="info"><h3>GitHub Lite</h3><p>Versão leve do GitHub para Android.</p><span class="version">Versão 3.5.1</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.01/Github__Lite__v3.5.1_1795193713360.apk">Baixar APK</a></article>
+<article class="app" data-name="rede canais entretenimento"><div class="app-icon">RC</div><div class="info"><h3>Rede Canais</h3><p>Aplicativo de entretenimento.</p><span class="version">Versão V1.0</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.0/Rede_Canais_v583.43_1794751882149.apk">Baixar APK</a></article>
+<article class="app" data-name="mcpe dl lite minecraft"><div class="app-icon">MC</div><div class="info"><h3>MCPE DL Lite</h3><p>Aplicativo para Minecraft PE.</p><span class="version">Versão V1.0</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1/McpeDL_v1.79_1794752905555.apk">Baixar APK</a></article>
+<article class="app" data-name="discord comunicação mensagens"><div class="app-icon">D</div><div class="info"><h3>Discord Lite</h3><p>Aplicativo de comunicação e comunidades.</p><span class="version">Versão 1.4</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.04/Discord_v1.4_1795715383098.apk">Baixar APK</a></article>
+<article class="app" data-name="whatsapp lite conversa lite mensagens comunicação"><div class="app-icon">WL</div><div class="info"><h3>WhatsApp Lite</h3><p>Aplicativo de mensagens leve, desenvolvido como Conversa Lite.</p><span class="version">Versão 1.1.8</span></div><a class="download" href="https://github.com/paulusgaulos-byte/Nexus-downloads/releases/download/V1.00/Whatsapp_Lite_v1.1.8_1795193982408.apk">Baixar APK</a></article>
+<article class="app" data-name="google chrome navegador"><div class="app-icon">C</div><div class="info"><h3>Google Chrome</h3><p>Navegador de internet</p></div><a class="download" href="https://play.google.com/store/apps/details?id=com.android.chrome" target="_blank" rel="noopener noreferrer">Baixar</a></article>
+<article class="app" data-name="vlc player vídeo música"><div class="app-icon">V</div><div class="info"><h3>VLC</h3><p>Reprodutor de mídia</p></div><a class="download" href="https://play.google.com/store/apps/details?id=org.videolan.vlc" target="_blank" rel="noopener noreferrer">Baixar</a></article>
+<article class="app" data-name="whatsapp mensagens comunicação"><div class="app-icon">W</div><div class="info"><h3>WhatsApp</h3><p>Aplicativo de mensagens</p></div><a class="download" href="https://play.google.com/store/apps/details?id=com.whatsapp" target="_blank" rel="noopener noreferrer">Baixar</a></article>
+</section>
+<nav class="pagination" id="pagination" aria-label="Paginação"></nav>
+<div class="page-status" id="pageStatus" aria-live="polite"></div>
+</main>
+<footer>NEXUS DOWNLOADS © 2026<p>Distribuição de aplicativos</p></footer>
+<div id="copyToast" class="toast" role="status" aria-live="polite" hidden></div>
+<script>
+const search = document.getElementById("search");
+const appCards = Array.from(document.querySelectorAll(".app"));
+const pagination = document.getElementById("pagination");
+const pageStatus = document.getElementById("pageStatus");
+const perPage = 10;
+let currentPage = 1;
+let filteredApps = appCards.slice();
+
+function renderPagination() {
+  const totalPages = Math.max(1, Math.ceil(filteredApps.length / perPage));
+  if (currentPage > totalPages) currentPage = totalPages;
+
+  appCards.forEach(card => card.hidden = true);
+  const start = (currentPage - 1) * perPage;
+  filteredApps.slice(start, start + perPage).forEach(card => card.hidden = false);
+
+  pagination.innerHTML = "";
+  const previous = document.createElement("button");
+  previous.className = "page-btn";
+  previous.textContent = "‹";
+  previous.setAttribute("aria-label", "Página anterior");
+  previous.disabled = currentPage === 1;
+  previous.addEventListener("click", () => { currentPage--; renderPagination(); });
+  pagination.appendChild(previous);
+
+  for (let page = 1; page <= totalPages; page++) {
+    const button = document.createElement("button");
+    button.className = "page-btn" + (page === currentPage ? " active" : "");
+    button.textContent = page;
+    button.setAttribute("aria-label", "Página " + page);
+    button.setAttribute("aria-current", page === currentPage ? "page" : "false");
+    button.addEventListener("click", () => { currentPage = page; renderPagination(); });
+    pagination.appendChild(button);
+  }
+
+  const next = document.createElement("button");
+  next.className = "page-btn";
+  next.textContent = "›";
+  next.setAttribute("aria-label", "Próxima página");
+  next.disabled = currentPage === totalPages;
+  next.addEventListener("click", () => { currentPage++; renderPagination(); });
+  pagination.appendChild(next);
+
+  const shownStart = filteredApps.length ? start + 1 : 0;
+  const shownEnd = Math.min(start + perPage, filteredApps.length);
+  pageStatus.textContent = filteredApps.length
+    ? `Mostrando ${shownStart}–${shownEnd} de ${filteredApps.length} aplicativos`
+    : "Nenhum aplicativo encontrado.";
+  pagination.hidden = totalPages <= 1;
+}
+
+search.addEventListener("input", () => {
+  const term = search.value.toLowerCase().trim();
+  filteredApps = appCards.filter(card =>
+    (card.dataset.name + " " + card.innerText).toLowerCase().includes(term)
+  );
+  currentPage = 1;
+  renderPagination();
+});
+
+renderPagination();
+
+// Mantém a cópia da chave publicável nos botões que apontam para arquivos APK.
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_pc4H2wBuVdxLl1hWHSRmyg_1mza335m";
+const copyToast = document.getElementById("copyToast");
+function showCopyToast(message) {
+  copyToast.textContent = message;
+  copyToast.hidden = false;
+}
+function copyKeyFallback() {
+  const field = document.createElement("textarea");
+  field.value = SUPABASE_PUBLISHABLE_KEY;
+  field.setAttribute("readonly", "");
+  field.style.position = "fixed";
+  field.style.opacity = "0";
+  document.body.appendChild(field);
+  field.select();
+  let copied = false;
+  try { copied = document.execCommand("copy"); } catch (error) { copied = false; }
+  field.remove();
+  return copied;
+}
+document.querySelectorAll('a.download[href*=".apk"]').forEach(link => {
+  link.addEventListener("click", async event => {
+    event.preventDefault();
+    let copied = false;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(SUPABASE_PUBLISHABLE_KEY);
+        copied = true;
+      }
+    } catch (error) { copied = false; }
+    if (!copied) copied = copyKeyFallback();
+    showCopyToast(copied
+      ? "Chave copiada. Iniciando o download..."
+      : "Não foi possível copiar a chave. Iniciando o download...");
+    const downloadUrl = link.href;
+    setTimeout(() => { window.location.href = downloadUrl; }, 450);
+  });
+});
+</script>
+</body>
+</html>
